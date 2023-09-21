@@ -1,0 +1,304 @@
+ @import url('https://fonts.googleapis.com/css2?family=Foldit&family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+
+:root {
+  --gradient-shadow: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+}
+
+body{
+    background-image: url(./Images/mesh-gradients.svg);
+    background-size: cover;
+    background-repeat: none;
+}
+/* main{
+    /* box-shadow: 5px 10px #888888; */
+   /* filter: blur(10%); 
+
+} */
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navlogo img{
+    width: 70px;
+    height: auto ;
+}
+
+.navlinks{
+    display: flex;
+    gap: 30px;
+}
+
+.navlinks a{
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+}
+
+/* first button design */
+.shadow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    padding: 10px 20px 10px 20px;
+    background: linear-gradient(0deg, #000, #262626);
+}
+
+.shadow:before,
+.shadow:after {
+content: "";
+position: absolute;
+top: -2px;
+left: -2px;
+background: var(--gradient-shadow);
+background-size: 400%;
+width: calc(100% + 4px);
+height: calc(100% + 4px);
+z-index: -1;
+animation: animate 20s linear infinite;
+}
+  
+.shadow:after {
+filter: blur(20px);
+}
+  
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 300% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* container holding both the image and the paragraph */
+.container{
+    display : flex;
+    justify-content: space-around;
+}
+
+/* second button design */
+.button {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0px;
+    cursor: pointer;
+    outline: 0px;
+    padding: 0 2px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+
+  .button a{
+    text-decoration: none !important ;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .backdrop {
+    position: relative;
+    display: block;
+    width: 10rem;
+    height: 3rem;
+    background-color: rgb(36, 33, 228);
+    z-index: -1;
+    bottom: 23px;
+    left: 20%;
+    border-radius: 15px;
+    transform: translateX(-50%) translateY(-50%);
+    transition: all ease-in-out 0.5s;
+  }
+  
+  .button:hover + .backdrop {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: rotate(15deg) translateX(-50%) translateY(-50%);
+  }
+  
+  .button:active,.button:active +.backdrop {
+    box-shadow: none;
+  }
+
+  /* social media card */
+  .card {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: lightgrey;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 1s ease-in-out;
+  }
+  
+  .background {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 100% 107%, #ff89cc 0%, #9cb8ec 30%, #00ffee 60%, #62c2fe 100%);
+  }
+
+
+  
+  .logo {
+    position: absolute;
+    right: 60%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .logo .logo-svg {
+    fill: rgb(255, 252, 252);
+    width: 150px;
+    height: 50px;
+    font-family: 'Foldit', cursive;
+  }
+
+  
+  
+  .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .icon .svg {
+    fill: rgba(255, 255, 255, 0.797);
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .box {
+    position: absolute;
+    padding: 10px;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.389);
+    border-top: 2px solid rgb(255, 255, 255);
+    border-right: 1px solid white;
+    border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
+    box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
+    transform-origin: bottom left;
+    transition: all 1s ease-in-out;
+  }
+  
+  .box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .box:hover .svg {
+    fill: white;
+  }
+  
+  .box1 {
+    width: 70%;
+    height: 70%;
+    bottom: -70%;
+    left: -70%;
+  }
+  
+  .box1::before {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ff53d4 60%, #62c2fe 90%);
+  }
+  
+  .box1:hover::before {
+    opacity: 1;
+  }
+  
+  .box1:hover .icon .svg {
+    filter: drop-shadow(0 0 5px white);
+  }
+  
+  .box2 {
+    width: 50%;
+    height: 50%;
+    bottom: -50%;
+    left: -50%;
+    transition-delay: 0.2s;
+  }
+  
+  .box2::before {
+    background: radial-gradient(circle at 30% 107%, #91e9ff 0%, #00ACEE 90%);
+  }
+  
+  .box2:hover::before {
+    opacity: 1;
+  }
+  
+  .box2:hover .icon .svg {
+    filter: drop-shadow(0 0 5px white);
+  }
+  
+  .box3 {
+    width: 30%;
+    height: 30%;
+    bottom: -30%;
+    left: -30%;
+    transition-delay: 0.4s;
+  }
+  
+  .box3::before {
+    background: radial-gradient(circle at 30% 107%, #969fff 0%, #b349ff 90%);
+  }
+  
+  .box3:hover::before {
+    opacity: 1;
+  }
+  
+  .box3:hover .icon .svg {
+    filter: drop-shadow(0 0 5px white);
+  }
+  
+  .box4 {
+    width: 10%;
+    height: 10%;
+    bottom: -10%;
+    left: -10%;
+    transition-delay: 0.6s;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .card:hover .box {
+    bottom: -1px;
+    left: -1px;
+  }
+  
+  .card:hover .logo {
+    transform: translate(0, 0);
+    bottom: 20px;
+    right: 20px;
+  }

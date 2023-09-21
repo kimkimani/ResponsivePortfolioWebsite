@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+# web service HTML app
+  web:
+    # context to build Dockerfile
+    build: .
+    # Container name
+    container_name: html-webapp
+    # Map port 3000 on the host to port 80 in the container
+    ports:
+      - "3000:80"
